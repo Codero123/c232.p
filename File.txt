@@ -1,0 +1,11 @@
+SELECT * FROM compnay_orders;
+SELECT * FROM order_items;
+
+SELECT customers.first_name, customers.last_name, company_orders.date, company_orders.total_amount FROM customers
+INNER JOIN company_orders ON customers_id = company_orders.customers_id;
+
+SELECT customers.first_name, customers.last_name, company_orders.date, company_orders.total_amount FROM customers
+LEFT JOIN company_orders ON customers.id = company_orders.customer_id;
+
+SELECT suppliers.first_name, suppliers.last_name, company_orders.date, company_orders.total_amount FROM suppliers
+INNER JOIN company_orders ON supplier_id = company_orders.supplier_id;
